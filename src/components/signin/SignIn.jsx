@@ -1,57 +1,33 @@
 import React from 'react'
 import './signin.css'
+import SignImg from '../../assets/images/signup-img.jpg'
+import { Input } from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 export default function SingIn() {
   return (
-    <div className='container cont '>
-<div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked/><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"/><label for="tab-2" class="tab">Sign Up</label>
-		<div class="login-form">
-			<div class="sign-in-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input"/>
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password"/>
-				</div>
-				
-				<div class="group">
-					<input type="submit" class="button" value="Sign In"/>
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
-				</div>
-			</div>
-			<div class="sign-up-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input"/>
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password"/>
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password"/>
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input"/>
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign Up"/>
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<label for="tab-1">Already Member?</label>
-				</div>
-			</div>
-		</div>
+    <div className='mt-5'>
+<div className="row">
+	<div className="col-md-6">
+<img src={SignImg} alt="this is sigup image"  className='signupImg'/>
+	</div>
+	<div className="col-md-6">
+<div className="head">
+	<h2>Create your account</h2>
+	<h5 className='mt-3'>it's free to start learning</h5>
+</div>
+<form action="" className='signupForm mt-5'>
+	<h6 className='mt-1'>Username</h6>
+<Input variant='flushed' placeholder='Enter your username'  className='mt-1' />
+
+<h6 className='mt-1'>Email</h6>
+<Input variant='flushed' placeholder='Enter your email' className='mt-1' />
+
+<h6 className='mt-1'>Create a password</h6>
+<Input variant='flushed' placeholder='Enter your password' className='mt-1' />
+<Button type='submit' className='w-100 mt-3' colorScheme='twitter'>Sign Up</Button>
+<p className='mt-3 fs-6'>By clicking on the sign up button you agree to our Terms and Conditions of Use.</p>
+
+</form>
 	</div>
 </div>
     </div>
